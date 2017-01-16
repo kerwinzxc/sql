@@ -13,7 +13,7 @@ RUN set -x \
     && unzip -x /tmp/www.zip \
     && cp -r /tmp/upload/* /var/www/html/ \
     && /etc/init.d/mysql start \
-    && mysql -e "CREATE DATABASE vlcmd DEFAULT CHARACTER SET utf8;" -uroot -p \
+    && mysql -e "CREATE DATABASE vlcms DEFAULT CHARACTER SET utf8;" -uroot -p \
     && mysql -e "use vlcms;source /tmp/vlcms.sql;" -uroot -p \
     && rm -rf /tmp/* \
     && chown -R www-data:www-data /var/www/html
